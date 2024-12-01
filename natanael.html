@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Netflix</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: white;
+        }
+        .banner {
+            height: 60vh;
+            background: url('https://tiago-41.github.io/final-task/palword.png') center/cover no-repeat;
+            position: relative;
+        }
+        .content {
+            position: absolute;
+            bottom: 20px;
+            left: 50px;
+        }
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #d50745;
+        }
+        .description {
+            font-size: 1.2rem;
+            margin: 15px 0;
+            max-width: 500px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            cursor: pointer;
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+        .play {
+            background-color: #e50914;
+            color: white;
+        }
+        .more-info {
+            background-color: rgba(255, 255, 255, 0.6);
+            color: black;
+        }
+        .gallery {
+            padding: 20px;
+        }
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        .movie-card {
+            background-color: #333;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+        .movie-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .movie-card p {
+            margin: 10px 0 0;
+        }
+        .extra-info {
+    display: none; /* Caché par défaut */
+    color: #ead410;
+}
+
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="content">
+            <h1 class="title">Palworld</h1>
+            <p class="description">
+                Set 18 million years ago in a fictional...
+            </p>
+            <p class="extra-info">
+                <strong>Titre :</strong> The Legend of Palworld <br>
+                <strong>Date de sortie :</strong> 2024-2025 <br>
+                <strong>Auteur :</strong> natanael  utret <br>
+                <strong>Description :</strong> Set 18 million years ago in a fictional fantasy land called Pal-Land, as Arthur is challenged by the difficulties of exploring this land he captures an abundance of creatures called pals. They join his adventure as he conquers this land.
+            </p>
+            
+            <div class="buttons">
+                <button class="btn play">▶ Lecture</button>
+                <button class="btn more-info" onclick="showMoreInfo()">ℹ️ Plus d'infos</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <h2>Films similaires</h2>
+        <div class="movie-grid">
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/150x220" alt="Film 1" href="">
+                <p>Fantome scholl</p>
+            </div>
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/150x220" alt="Film 2">
+                <p>wensday</p>
+            </div>
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/150x220" alt="Film 3">
+                <p>Harry Potter</p>
+            </div>
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/150x220" alt="Film 4">
+                <p>Kingsman</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showMoreInfo() {
+            const extraInfo = document.querySelector('.extra-info');
+            if (extraInfo.style.display === 'none' || extraInfo.style.display === '') {
+                extraInfo.style.display = 'block'; // Affiche les infos
+            } else {
+                extraInfo.style.display = 'none'; // Cache les infos
+            }
+        }
+    </script>
+    
+</body>
+</html>
